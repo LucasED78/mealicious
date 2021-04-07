@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'dribbble_app',
+    title: 'meals_app',
     htmlAttrs: {
       lang: 'en'
     },
@@ -37,13 +37,20 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/fontawesome'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-  ],
-
+  modules: ['@nuxtjs/axios'],
+  axios: {
+    baseURL: 'https://www.themealdb.com/api/json/v1/1'
+  },
+  fontawesome: {
+    icons: {
+      solid: true
+    }
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
