@@ -88,8 +88,6 @@ export default Vue.extend({
     }
   },
   created () {
-    this.fetchAll()
-
     this.debounce = this.$watch('input', debounce((value: string) => {
       if (value.length === 0) {
         return this.fetchAll()
@@ -100,7 +98,7 @@ export default Vue.extend({
     }, 500))
 
     this.input = this.$route.query.search as string ?? ''
-
+    if (!this.input) { this.fetchAll() }
     if (this.input) { this.$store.commit(mealsStoreConstants.CHANGE_LOADING, true) }
   },
   methods: {
