@@ -30,7 +30,7 @@ git clone https://github.com/lucased78/mealicious
 cd mealicious && npm install
 ```
 
-3 - Run the robot
+3 - Run the app
 ```bash
 npm run dev
 ```
