@@ -37,7 +37,7 @@ export default Vue.extend({
   methods: {
     onButtonClick () {
       this.$router.push({
-        path: '/home',
+        path: '/meal',
         query: {
           search: this.input
         }
