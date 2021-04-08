@@ -1,20 +1,48 @@
-# dribbble_app
+# Mealicious
 
-## Build Setup
+# Index
 
+* [About the project](#about-the-project) 
+* [Features](#features)
+* [How to install](#how-to-install)
+* [Running the tests](#running-the-tests)
+* [Technologies](#technologies)
+
+# About the project
+The purpose of this project is to allow the user to search for meals and see his recipes.
+
+# Features
+
+:trophy: &nbsp; search by name
+
+:trophy: &nbsp; search suggestions
+
+:trophy: &nbsp; ingredients and instructions
+
+# How to install
+
+1 - Clone this project
 ```bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
+git clone https://github.com/lucased78/mealicious
+```
+2 - Install the dependencies
+```bash
+cd mealicious && npm install
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+3 - Run the robot
+```bash
+npm run dev
+```
+
+# Running the tests
+To run the tests, simply run the following command:
+```bash
+npm run test
+```
+
+# Technologies: 
+- Vue
+- Nuxt
+- Vuex
+- Jest
