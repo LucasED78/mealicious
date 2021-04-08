@@ -1,7 +1,7 @@
 <template>
   <transition name="modal">
     <div class="modal__overlay" @click="onClick">
-      <div class="modal w-8/12 h-4/5 bg-white p-4 mt-16">
+      <div class="modal rounded-md w-8/12 h-4/5 bg-white p-4 mt-16">
         <div class="modal__header flex justify-between">
           <slot name="header" />
 
@@ -27,6 +27,12 @@
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
+  mounted () {
+    document.body.classList.add('no-scroll')
+  },
+  destroyed () {
+    document.body.classList.remove('no-scroll')
+  },
   methods: {
     emitAll (name: string) {
       let vm = this.$parent
@@ -47,10 +53,6 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-  body {
-    overflow: hidden;
-  }
-
   .modal__overlay {
     width: 100%;
     height: 100%;

@@ -22,7 +22,7 @@
         </p>
 
         <div class="grid md:grid-cols-3 xs:grid-cols-1">
-          <p v-for="ing in ingredientWithMeasure" :key="ing" class="my-1" data-testid="ingredients">
+          <p v-for="ing in ingredientWithMeasure" :key="`${ing}-${randomId()}`" class="my-1" data-testid="ingredients">
             {{ ing }}
           </p>
         </div>
@@ -46,6 +46,7 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue'
+import { v4 as uuid } from 'uuid'
 import { Meal } from '~/store/meal'
 export default Vue.extend({
   props: {
@@ -64,6 +65,11 @@ export default Vue.extend({
     },
     instructionWithNewLine () {
       return this.meal.strInstructions.replace(/\r\n/, '<br><br>')
+    }
+  },
+  methods: {
+    randomId () {
+      return uuid()
     }
   }
 })
