@@ -24,7 +24,7 @@
         :name="meal.strMeal"
         :area="meal.strArea"
         :category="meal.strCategory"
-        @click="selectedMeal = meal; showModal = !showModal"
+        @click="selectedMeal = meal; showModal = !showModal;"
       />
     </base-grid>
 
@@ -79,7 +79,17 @@ export default Vue.extend({
       return (this.$store.state.meal as MealState).history
     }
   },
+  watch: {
+    selectedMeal () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }
+  },
   created () {
+    this.fetchAll()
+
     this.debounce = this.$watch('input', debounce((value: string) => {
       if (value.length === 0) {
         return this.fetchAll()
