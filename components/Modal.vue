@@ -6,9 +6,8 @@
           <slot name="header" />
 
           <font-awesome-icon
-            class="icon"
+            class="icon text-red-600 cursor-pointer text-xl"
             :icon="['fa', 'times-circle']"
-            :style="{ color: 'red', cursor: 'pointer' }"
             @click="onCloseButtonClick"
           />
         </div>

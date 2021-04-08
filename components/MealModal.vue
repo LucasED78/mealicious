@@ -16,7 +16,7 @@
           </span>
         </p>
 
-        <div class="grid grid-cols-3">
+        <div class="grid md:grid-cols-3 xs:grid-cols-1">
           <p v-for="ing in ingredientWithMeasure" :key="ing" class="my-1" data-testid="ingredients">
             {{ ing }}
           </p>

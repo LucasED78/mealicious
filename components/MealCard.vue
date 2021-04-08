@@ -7,8 +7,8 @@
       </div>
 
       <div class="flex mt-2">
-        <icon-text :text="category" class="mr-1" data-testid="category">
-          <font-awesome-icon :icon="['fa', 'cutlery']" />
+        <icon-text :text="category" class="mr-4" data-testid="category">
+          <font-awesome-icon :icon="['fa', 'book']" />
         </icon-text>
 
         <icon-text :text="area" data-testid="area">
@@ -55,14 +55,14 @@ export default Vue.extend({
 
 <style scoped>
   article {
-    box-shadow: 0px 0px 5px 0px rgba(231,231,231,1);
+    box-shadow: 0px 0px 5px 0px rgb(158, 158, 158);
     border-radius: 10px;
     transition: all .5s;
     cursor: pointer;
   }
 
   article:hover {
-    box-shadow: 0px 0px 15px 0px rgba(231,231,231,1)
+    box-shadow: 0px 0px 16px 0px rgba(231,231,231,1)
   }
 
   img {
