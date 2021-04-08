@@ -3,7 +3,7 @@
     <img :src="imageUrl" alt="meal image">
     <div class="flex justify-between items-center p-2">
       <div data-testid="name">
-        {{ name }}
+        {{ limitedName }}
       </div>
 
       <div class="flex mt-2">
@@ -45,10 +45,20 @@ export default Vue.extend({
       required: true
     }
   },
+  computed: {
+    limitedName () {
+      const name = this.name as string
+
+      return name.length > 15
+        ? `${name.substr(0, 15)}...`
+        : name
+    }
+  },
   methods: {
     onClick () {
       this.$emit('click')
     }
+
   }
 })
 </script>

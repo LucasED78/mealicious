@@ -5,14 +5,19 @@
     </div>
 
     <div slot="body">
-      <img :src="meal.strMealThumb" :alt="`image for meal ${meal.strMeal}`" class="w-6/12 max-h-64 mx-auto" data-testid="image">
+      <img
+        :src="meal.strMealThumb"
+        :alt="`image for meal ${meal.strMeal}`"
+        class="w-6/12 max-h-64 mx-auto rounded-md my-2"
+        data-testid="image"
+      >
 
       <div v-if="ingredientWithMeasure.length" class="my-3">
         <p class="mb-2">
           <font-awesome-icon :icon="['fa', 'book']" class="mr-0.3 text-red-600" />
 
           <span class="text-xl text-red-600">
-            Ingredientes
+            Ingredients
           </span>
         </p>
 
@@ -28,7 +33,7 @@
           <font-awesome-icon :icon="['fa', 'book']" class="mr-0.3 text-red-600" />
 
           <span class="text-xl text-red-600">
-            Modo de preparo
+            Instructions
           </span>
         </p>
 
@@ -41,7 +46,7 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue'
-import { Meal } from '@/store/meals'
+import { Meal } from '~/store/meal'
 export default Vue.extend({
   props: {
     meal: {

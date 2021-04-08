@@ -47,6 +47,10 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+  body {
+    overflow: hidden;
+  }
+
   .modal__overlay {
     width: 100%;
     height: 100%;

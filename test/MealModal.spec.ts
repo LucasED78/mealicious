@@ -1,6 +1,6 @@
 import { mount, Wrapper } from '@vue/test-utils'
 import ModalMeal from '@/components/MealModal.vue'
-import { Meal } from '~/store/meals'
+import { Meal } from '~/store/meal'
 
 describe('MealModal', () => {
   let wrapper: Wrapper<any>
